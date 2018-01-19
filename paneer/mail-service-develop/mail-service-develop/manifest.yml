@@ -1,0 +1,10 @@
+---
+applications:
+- name: mail-service
+  instance: 1
+  host: mail-service
+  path: build\libs\mail-service-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  memory: 1024M
+  services:
+    - oms-eureka

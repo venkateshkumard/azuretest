@@ -1,0 +1,13 @@
+---
+applications:
+- name: inventory-service
+  instance: 1
+  host: inventory-service
+  path: build\libs\inventory-service-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  memory: 1024M
+  health-check-type: process
+  services:
+    - oms-eureka
+    - oms-mongo
+    - oms-configserver

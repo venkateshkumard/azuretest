@@ -1,0 +1,10 @@
+---
+applications:
+- name: api-gateway
+  instance: 1
+  memory: 2048M
+  host: omszuul
+  path: build\libs\api-gateway-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  services:
+    - oms-eureka

@@ -1,0 +1,58 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.7.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'maven-publish'
+
+group = 'com.oms.common.web'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+task sourceJar(type: Jar) {
+	from sourceSets.main.allJava
+}
+
+publishing {
+	publications {
+		maven(MavenPublication) {
+			groupId 'com.oms.common.web'
+			artifactId 'oms-common-web'
+			version "${version}"
+
+			from components.java
+
+			artifact sourceJar {
+				classifier "sources"
+			}
+		}
+	}
+
+}
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+	compile 'io.springfox:springfox-swagger2:2.6.1'
+	compile 'io.springfox:springfox-swagger-ui:2.6.1'
+	compile 'io.swagger:swagger-core:1.5.12'
+	compile "org.springframework.boot:spring-boot-autoconfigure:${springBootVersion}"
+	compile "org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}"
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	testCompile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}

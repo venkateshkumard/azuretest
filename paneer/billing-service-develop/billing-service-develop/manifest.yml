@@ -1,0 +1,11 @@
+---
+applications:
+- name: billing-service
+  instance: 1
+  host: billing-service
+  path: build\libs\billing-service-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  memory: 1024M
+  services:
+    - oms-eureka
+    - oms-rabbit

@@ -1,0 +1,40 @@
+info:
+    description: "OMS Mail Service"
+spring:
+  application:
+    name: mail-service
+  mail:
+      host: relay.stp.mrll.com
+      port: 25
+      protocol: smtp
+      starttls: true
+      auth: true
+      username: rajasekar.vadamalaimuthu@merrillcorp.com
+      password: Infosys123
+security:
+    basic:
+      enabled: false
+oms:
+  appKey: mail-service
+  common:
+    web:
+      config:
+        swagger:
+          controllerPackage: com.oms.mail.controller
+          author: PVR
+          apiName: Mail-Service
+          apiVersion: 1.0.0
+          apiDescription: API for Mail-service
+  email:
+    admin:
+      defaultEmailAddress: Order Management System <oms-noreply@mailinator.com>
+
+logging:
+  level:
+  root: DEBUG
+  org.springframework.web: ERROR
+  com.oms.mail: DEBUG
+
+#server:
+#    port: 9977
+

@@ -1,0 +1,43 @@
+info:
+  description: "Service for billing operations"
+
+spring:
+  application:
+    name: billing-service
+
+oms:
+  appKey: billing-service
+  common:
+    web:
+      config:
+        swagger:
+          controllerPackage: com.oms.billing.controller
+          author: Panneerselvam
+          apiName: billing-service
+          apiVersion: 1.0.0
+          apiDescription: API for billing-service
+
+security:
+  basic:
+    enabled: false
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: ERROR
+    com.oms.billing: DEBUG
+#server:
+#  port: 9099
+
+#message:
+#
+#  orderBillingExchange: order-billing-exchange
+#  orderBillingRoutingKey: order-billing-routingkey
+#  orderBillingQueue: order-billing-queue
+#
+#  orderStatusExchange: order-status-exchange
+#  orderStatusRoutingKey: order-status-routingkey
+#  orderStatusQueue: order-status-queue
+#
+#url:
+#  mailServiceURL: http://localhost:9977/oms/mail
+#  eventServiceURL: http://localhost:9095/event/addEvent

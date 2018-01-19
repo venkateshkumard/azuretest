@@ -1,0 +1,33 @@
+info:
+  description: "Service for Event CRUD operations"
+
+spring:
+  application:
+    name: event-service
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/OMS
+
+
+oms:
+  appKey: event-service
+  common:
+    web:
+      config:
+        swagger:
+          controllerPackage: com.oms.event.controller
+          author: Michael Philomin Raj
+          apiName: Event-service
+          apiVersion: 1.0.0
+          apiDescription: API for Event-service
+
+security:
+  basic:
+    enabled: false
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: ERROR
+    com.oms.product: DEBUG
+#server:
+#  port: 9095

@@ -1,0 +1,35 @@
+info:
+  description: "Service for Product CRUD operations"
+
+spring:
+  application:
+    name: product-service
+#data:
+  #mongodb:
+    #uri: mongodb://localhost:27017/OMS
+
+
+oms:
+  appKey: product-service
+  common:
+    web:
+      config:
+        swagger:
+          controllerPackage: com.oms.product.controller
+          author: Michael Philomin Raj
+          apiName: Product-service
+          apiVersion: 1.0.0
+          apiDescription: API for Pustomer-service
+
+security:
+  basic:
+    enabled: false
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: ERROR
+    com.oms.product: DEBUG
+server:
+  port: 9092
+#url:
+  #inventoryServiceURL: http://localhost:9099/inventory/deleteProductRecord

@@ -1,0 +1,23 @@
+﻿# Enable exchange and queue
+message:
+  orderBillingExchange: order-billing-exchange
+  orderBillingRoutingKey: order-billing-routingkey
+  orderBillingQueue: order-billing-queue
+
+  orderStatusExchange: order-status-exchange
+  orderStatusRoutingKey: order-status-routingkey
+  orderStatusQueue: order-status-queue
+
+url:
+  mailServiceURL: https://mail-service/oms/mail
+  customerServiceURL: https://customer-service/customer/{customerId}
+  eventServiceURL: https://event-service/event
+  inventoryServiceURL: https://inventory-service/inventory/deleteProductRecord
+
+#logging
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: ERROR
+    com.oms: DEBUG
+    

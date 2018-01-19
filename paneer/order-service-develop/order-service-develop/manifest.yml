@@ -1,0 +1,13 @@
+---
+applications:
+- name: order-service
+  instance: 1
+  host: order-service
+  path: build\libs\order-service-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  memory: 1024M
+  services:
+    - oms-eureka
+    - oms-mongo
+    - oms-circuitbreaker
+    - oms-rabbit
