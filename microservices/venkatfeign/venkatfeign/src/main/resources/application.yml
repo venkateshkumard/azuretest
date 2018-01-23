@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: venkatfeign
+server:
+  port: 3333
+  
+security:
+  basic:
+    enabled: false

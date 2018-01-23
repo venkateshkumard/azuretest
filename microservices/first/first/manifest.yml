@@ -1,0 +1,9 @@
+---
+applications:
+- name: venkatfirst
+  host: venkatfirst
+  path: target/venkatfirst-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  memory: 1024M
+  services:
+    - Eureka-1
