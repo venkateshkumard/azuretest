@@ -1,0 +1,9 @@
+---
+applications:
+- name: gateway-service
+  host: gateway-service
+  path: target/gateway-service-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  memory: 680M
+  services:
+    - Eureka-1
