@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: venkatsecond 
-server:
-  port: 3333
-  
-security:
-  basic:
-    enabled: false

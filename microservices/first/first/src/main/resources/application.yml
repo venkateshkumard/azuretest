@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: venkatfirst 
-server:
-  port: 2222
-  
-security:
-  basic:
-    enabled: false
