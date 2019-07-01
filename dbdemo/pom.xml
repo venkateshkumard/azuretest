@@ -60,7 +60,7 @@
             </property> 
           </appSettings>  
           <!-- End of App Settings  -->  
-          <runtime> 
+          <!--runtime> 
             <os>linux</os>  
             <javaVersion>jre8</javaVersion>  
             <webContainer>TOMCAT 8.5</webContainer> 
@@ -74,7 +74,7 @@
                 </includes> 
               </resource> 
             </resources> 
-          </deployment> 
+          </deployment--> 
         </configuration> 
       </plugin> 
     </plugins> 
