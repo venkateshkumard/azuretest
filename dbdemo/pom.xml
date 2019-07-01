@@ -49,14 +49,14 @@
         <configuration> 
           <schemaVersion>V2</schemaVersion>  
           <resourceGroup>dbdemo-1561708291769-rg</resourceGroup>  
-          <appName>dbdemo-2806</appName>  
+          <appName>dbdemo</appName>  
           <region>South India</region>  
           <pricingTier>P1V2</pricingTier>  
           <!-- Begin of App Settings  -->  
           <appSettings> 
             <property> 
               <name>PORT</name>  
-              <value>80</value> 
+              <value>9090</value> 
             </property> 
           </appSettings>  
           <!-- End of App Settings  -->  
