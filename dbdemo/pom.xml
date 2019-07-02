@@ -53,17 +53,17 @@
           <region>South India</region>  
           <pricingTier>P1V2</pricingTier>  
           <!-- Begin of App Settings  -->  
-          <appSettings> 
+         <appSettings> 
             <property> 
               <name>PORT</name>  
-              <value>9090</value> 
+              <value>80</value> 
             </property> 
           </appSettings>  
           <!-- End of App Settings  -->  
-          <!--runtime> 
+          <runtime> 
             <os>linux</os>  
             <javaVersion>jre8</javaVersion>  
-            <webContainer>TOMCAT 8.5</webContainer> 
+            <webContainer>jre8</webContainer> 
           </runtime>  
           <deployment> 
             <resources> 
@@ -74,7 +74,7 @@
                 </includes> 
               </resource> 
             </resources> 
-          </deployment--> 
+          </deployment> 
         </configuration> 
       </plugin> 
     </plugins> 
