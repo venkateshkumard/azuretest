@@ -25,7 +25,7 @@ public class DbdemoApplication {
 }
 
 
-/*   // This means that this class is a Controller
+   // This means that this class is a Controller
  // This means URL's start with /demo (after Application path)
 class MainController {
 	@Autowired // This means to get the bean called userRepository
@@ -50,4 +50,4 @@ class MainController {
 		// This returns a JSON or XML with the users
 		return userRepository.findAll();
 	}
-}*/
+}
